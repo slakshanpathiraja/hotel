@@ -199,6 +199,10 @@ width: 45%;
     display: block;
     text-align: center;
   }
+  .home{
+    padding-left: 3%;
+    padding-right: 3%;
+  }
   .home-right , .home-img {
     display: none;
     width: 50%;
@@ -256,6 +260,9 @@ width: 45%;
   color: aliceblue;
 }
 @media (max-width : 600px){
+  .home-left h1{
+    font-size: 40px;
+  }
   .gallery{
     padding-left: 0%;
     width: 100%;
