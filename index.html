@@ -194,7 +194,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            $("#menu").hide();
+          function myFunction(x) {
+            if (x.matches) { // If media query matches
+              $("#menu").hide();
+            } else {
+              $("#menu").show();
+            }
+          }
+
+          var x = window.matchMedia("(max-width: 1000px)")
+          myFunction(x) // Call listener function at run time
+          x.addListener(myFunction) // Attach listener function on state changes
+
           $(".menu-toggle").click(function(){
             $("#menu").slideToggle();
           });
