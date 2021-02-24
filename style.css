@@ -9,6 +9,10 @@
 nav{
   height: 70px;
   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 nav h1{
   font-size: 45px;
@@ -180,7 +184,7 @@ width: 45%;
  float: right;
  width: 50%;
 }
-@media (max-width : 1000px){
+@media (max-width : 900px){
   
   .menu-toggle{
     display: block;
@@ -259,9 +263,19 @@ width: 45%;
   font-size: 20px;
   color: aliceblue;
 }
-@media (max-width : 600px){
+@media (max-width : 800px){
   .home-left h1{
     font-size: 40px;
+  }
+  .features-part1{
+    display: flex;
+    flex-direction: column;
+  }
+  .features-part1-right{
+    order: 1;
+  }
+  .features-part1-left{
+    order: 2;
   }
   .gallery{
     padding-left: 0%;

@@ -13,7 +13,9 @@
 <body>
     <header>
         <nav>
-            <h1 class="logo">LOGO</h1>
+            <h1 class="logo">
+              <img src="img/Logo.png" width="100px">
+            </h1>
             <div class="menu-toggle">
               <i class="fas fa-bars"></i>
             </div>
@@ -28,7 +30,7 @@
         </nav>
     </header>
     <main>
-        <section class="home" id="home">
+        <section class="home" id="home" style="margin-top: 0px;">
             <div class="home-left">
                 <h1 style="color: #636e72;">Management System <strong>for HOTELS</strong></h1>
                 <p style="color: #636e72;">This will make easy all the works from the proccess of managing  all the information of your hotel staff and all the customers who come to the hotel, taking all the orders quickly and appropriately , placing the orders at correct time to the proccess of making final bills .</p>
@@ -178,7 +180,7 @@
                       <tr>
                         <th scope="row">
                             <div class="contactus-card">
-                                <p>Mr. Lakshan Pathiraja
+                                <p>Mr. Amarasingha P.M.
                                 <br>Faculty Of Engineering
                                 <br>University Of Ruhuna</p>
                             </div>
@@ -213,23 +215,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
-          function myFunction(x) {
-            if (x.matches) { // If media query matches
-              $("#menu").hide();
-            } else {
-              $("#menu").show();
-            }
-          }
+      $(document).ready(function(){
+        function myFunction(x) {
+          if (x.matches) { // If media query matches
+            $("#menu").hide();
 
-          var x = window.matchMedia("(max-width: 1000px)")
-          myFunction(x) // Call listener function at run time
-          x.addListener(myFunction) // Attach listener function on state changes
-
-          $(".menu-toggle").click(function(){
-            $("#menu").slideToggle();
-          });
-          $("#home-btn").click(function(){
+            $("#home-btn").click(function(){
             $("#menu").hide();
           });
           $("#about-btn").click(function(){
@@ -244,7 +235,22 @@
           $("#contactus-btn").click(function(){
             $("#menu").hide();
           });
+
+          } else {
+            $("#menu").show();
+          }
+        }
+
+        var x = window.matchMedia("(max-width: 900px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+
+        $(".menu-toggle").click(function(){
+          $("#menu").slideToggle();
         });
-        </script>
+        
+
+      });
+    </script>
 </body>
 </html>
