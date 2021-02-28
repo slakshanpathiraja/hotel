@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Managmen System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://kit.fontawesome.com/6f72506122.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -31,15 +32,16 @@
     </header>
     <main>
         <section class="home" id="home" style="margin-top: 0px;">
-            <div class="home-left">
+            <div class="home-left" data-aos="fade-right">
                 <h1 style="color: #636e72;">Management System <strong>for HOTELS</strong></h1>
                 <p style="color: #636e72;">This will make easy all the works from the proccess of managing  all the information of your hotel staff and all the customers who come to the hotel, taking all the orders quickly and appropriately , placing the orders at correct time to the proccess of making final bills .</p>
-            </div>
+                <button type="button" onclick="" class="btn btn-success">Download Demo Version</button>
+              </div>
             <div class="home-riht">
                 <img class="home-img" src="img/slider-icon.png">
             </div>
         </section>
-        <section class="about" id="about">
+        <section class="about" id="about" data-aos="fade-left">
             <div class="about-left" >
                 <img class="about-img" src="img/1.png">
             </div>
@@ -49,8 +51,8 @@
                 <p>The speciallity of this system is the ability of getting the total cost from one click through a proper management of all the orders from the date the customer comes to the hotel up to the date he or she leaves the hotel. These specifications have been provided by us for the easiness of the small scale hotel owners like you.</p>
             </div>
         </section>
-        <section class="features" id="features">
-            <dic class="features-part1">
+        <section class="features" id="features" >
+            <dic class="features-part1" data-aos="fade-right">
                 <div class="features-part1-left">
                     <h1>Top features in this system</h1>
                     <p>All the features in this system is provided mainly for two catogories of people and they are different from each other as follows.</p>
@@ -61,7 +63,7 @@
                     <img class="features-part1-img" src="img/2.png">
                 </div>
             </dic>
-            <dic class="features-part2">
+            <dic class="features-part2" data-aos="fade-left">
                 <div class="features-part2-left" >
                     <img class="features-part2-img" src="img/3.png">
                 </div>
@@ -71,7 +73,7 @@
                 </div>
                 
             </dic>
-            <dic class="features-part1">
+            <dic class="features-part1" data-aos="fade-right">
                 <div class="features-part1-left">
                     <h1>For the employees of the hotel</h1>
                     <p>After recieving any order from a customer to the staff, all the information related to it such as what has ordered, which room has placed it, at what time it has been placed and what is the quantity of the order are provided for the dashboard in an appropriate manner. As well as if it is unable to provide any kind of service at the moment, system can adjust not to display it for the customer. Due to this, it doesn't require to aware the customer often. Moreover , as this system saves all the orders , it provides the ability to give a detailed information at the proccess of making the final bill.</p>
@@ -81,7 +83,7 @@
                     <img class="features-part1-img" src="img/4.png">
                 </div>
             </dic>
-            <dic class="features-part2">
+            <dic class="features-part2" data-aos="fade-left">
                 <div class="features-part2-left" >
                     <img class="features-part2-img" src="img/5.png">
                 </div>
@@ -164,7 +166,7 @@
         </section>
         <h1 class="contactus-head">Talk To Us</h1>
         <section class="contactus" id="contactus"> 
-            <div class="contactus-left">
+            <div class="contactus-left" data-aos="fade-right">
                 <h2>Developer Team</h2>
                 <table class="table">
                     <tbody>
@@ -189,7 +191,7 @@
                     </tbody>
                   </table>
             </div>
-            <div class="contactus-right">
+            <div class="contactus-right" data-aos="fade-left">
                 <form>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Name</label>
@@ -203,12 +205,13 @@
                       <label for="exampleFormControlTextarea1">Message</label>
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
                   </form>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-copy">Copyright © 2020 -2021 All Rights Reserved.</div>
+        <div class="footer-copy">Copyright © 2020 -2021 All Rights Reserved. LakManu Develop team</div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -248,9 +251,11 @@
         $(".menu-toggle").click(function(){
           $("#menu").slideToggle();
         });
-        
-
       });
     </script>
-</body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+   </body> 
 </html>
